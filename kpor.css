@@ -1,0 +1,108 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Calibri;
+}
+header{
+  background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("pictures/pexels-vikram-sundaramoorthy-1119796.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+}
+ul{
+
+  float: right;
+  list-style-type: none;
+ margin-top:25px
+
+}
+ul  li
+{
+
+  display: inline-block;
+}
+ul li a{
+  text-decoration: none;
+color: white;
+padding: 5px 20px;
+border: 1px solid transparent;
+  transition: 0.6s ease;
+}
+ul li a:hover{
+  background: black;
+  color: beige;
+}
+ul li.active a{
+  background:black;
+  color: beige;
+
+}
+.logo img{
+  float: left;
+  width: 75px;
+  height: auto;
+}
+.main{
+  max-width: 1200px;
+  margin: auto;
+}
+.title{
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+.title {
+  color: white;
+  font-size: 40px;
+
+}
+.button{
+  position: absolute;
+  top: 60%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+.btn {
+  padding: 1.1em 2em;
+  background: none;
+  border: 2px solid #fff;
+  font-size: 15px;
+  color: #131313;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+  border-radius: 12px;
+  background-color: #ecd448;
+  font-weight: bolder;
+  box-shadow: 0 2px 0 2px #000;
+}
+
+.btn:before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 120%;
+  background-color: #ff6700;
+  top: 50%;
+  transform: skewX(30deg) translate(-150%, -50%);
+  transition: all 0.5s;
+}
+
+.btn:hover {
+  background-color: #4cc9f0;
+  color: #fff;
+  box-shadow: 0 2px 0 2px #0d3b66;
+}
+
+.btn:hover::before {
+  transform: skewX(30deg) translate(150%, -50%);
+  transition-delay: 0.1s;
+}
+
+.btn:active {
+  transform: scale(0.9);
+}
+

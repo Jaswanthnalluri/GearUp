@@ -1,0 +1,126 @@
+.loader {
+  display: flex;
+  position: absolute;
+  top:45%;
+  left: 48%;
+
+}
+body{
+  background-color: black;
+}
+
+.l,.l:nth-child(9) {
+  margin: 0.15em;
+  border-radius: 5em;
+  width: 0.4em;
+  background-color: #f12711;
+  height: 3em;
+  box-shadow: 1px 1px 4px black;
+  animation: load_5186 cubic-bezier(.41,.44,.72,.69) 2s infinite;
+}
+
+.l:nth-child(2),
+.l:nth-child(8) {
+  background-color: #f24e13;
+  animation-delay: .25s;
+}
+
+.l:nth-child(3),
+.l:nth-child(7) {
+  background-color: #f36915;
+  animation-delay: .5s;
+}
+
+.l:nth-child(4),
+.l:nth-child(6) {
+  background-color: #f48c17;
+  animation-delay: .75s;
+}
+
+.l:nth-child(5) {
+  background-color: #f5af19;
+  animation-delay: 1s;
+}
+
+@keyframes load_5186 {
+  0% {
+    transform: scaleY(1);
+  }
+
+  100% {
+    transform: scaleY(-1);
+  }
+}
+
+.btn {
+  padding: 1.1em 2em;
+  background: none;
+  border: 2px solid #fff;
+  font-size: 15px;
+  color: #131313;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+  border-radius: 12px;
+  background-color: #ecd448;
+  font-weight: bolder;
+  box-shadow: 0 2px 0 2px #000;
+  position: absolute;
+  top: 55%;
+  left:47%;
+}
+
+.btn:before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 120%;
+  background-color: #ff6700;
+  top: 50%;
+  transform: skewX(30deg) translate(-150%, -50%);
+  transition: all 0.5s;
+}
+
+.btn:hover {
+  background-color: #4cc9f0;
+  color: #fff;
+  box-shadow: 0 2px 0 2px #0d3b66;
+}
+
+.btn:hover::before {
+  transform: skewX(30deg) translate(150%, -50%);
+  transition-delay: 0.1s;
+}
+
+.btn:active {
+  transform: scale(0.9);
+}
+ul{
+
+  float: right;
+  list-style-type: none;
+  margin-top:25px
+
+}
+ul  li
+{
+
+  display: inline-block;
+}
+ul li a{
+  text-decoration: none;
+  color: white;
+  padding: 5px 20px;
+  border: 1px solid transparent;
+  transition: 0.6s ease;
+}
+ul li a:hover{
+  background: black;
+  color: beige;
+}
+ul li.active a{
+  background:black;
+  color: beige;
+
+}
